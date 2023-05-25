@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Posture Detector</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="posture detector.css">
+    </head>
+    <body>
+        <!--
+       <div class="container">
+           <div class="card">
+                
+                <div class="percent" style="--clr:#101010;--num:85;">
+                    <div class="dot"></div>
+                    <svg> 
+                        
+                        <circle cx="70" cy="70" r="200" ></circle>
+                        <circle cx="70" cy="70" r="200" ></circle>
+                    </svg>
+                    <div class="number">
+                      <h2>your posture <span> Now </span></h2>
+                    </div>
+            </div>
+            </div>
+        </div>-->
+ 
+        <div class="container">
+  <div class="card">
+    
+    <div class="percent" style="--clr:#3ed6f4;--num:85;">
+      <div class="dot"></div>
+      <svg>
+        <circle cx="70" cy="70" r="200"></circle>
+        <circle cx="70" cy="70" r="200"></circle>
+      </svg>
+      <div class="number">
+        <h2>your posture <span> Now </span></h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <div class="header">
+        <div class="side-nav" >
+            <div class="user">
+                <img src="per2.png" class="user-img">
+                <div>
+                  <h2>name</h2>
+                  <h2>email</h2>
+                 </div> 
+                </div>
+                <ul>
+                  <li><ion-icon name="pie-chart-outline"></ion-icon>
+                  <p><a href="index.html">Home</a></p></li>
+                    <li><ion-icon name="stats-chart-outline"></ion-icon>
+                      <p>my track</p><li>
+                      <li><ion-icon name="people-outline"></ion-icon>
+                        <p>comunity</p></li>
+                      <li><ion-icon name="diamond-outline"></ion-icon>
+                        <p>rewards</p></li>
+                      <li><ion-icon name="help-circle-outline">
+                      </ion-icon><p>FAQ</p>
+                      </li>
+                </ul>  
+                <ul><li><ion-icon name="log-out-outline"></ion-icon><p><a href="log in.html">LogOut</a></p></li></ul>
+ </div>
+      </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+
+<script>
+    const circle = document.getElementById('myCircle');
+    const card = document.querySelector('.card');
+    const cardRect = card.getBoundingClientRect();
+    const circleRadius = parseFloat(circle.getAttribute('r'));
+    
+    function updateCirclePosition(ball) {
+      const ballRect = ball.getBoundingClientRect();
+      const ballX = ballRect.left + ballRect.width / 2;
+      const ballY = ballRect.top + ballRect.height / 2;
+      const circleX = cardRect.left + cardRect.width / 2;
+      const circleY = cardRect.top + cardRect.height / 2;
+      const deltaX = ballX - circleX;
+      const deltaY = ballY - circleY;
+      const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
+      const angle = Math.atan2(deltaY, deltaX);
+      const maxDistance = cardRect.width / 2 - circleRadius;
+      const clampedDistance = Math.max(Math.min(distance, maxDistance), 0)}
+    </script>
+    </body>
+</html>

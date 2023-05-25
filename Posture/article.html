@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <header class="header">
+		<h1 class="logo">
+        <a href="#">Posture</a></h1>
+
+      <ul class="main-nav" >
+      <li><a href="index.html">Home</a>
+        </li>
+       <li><a href="article.html">Articles</a>
+        <ul class="dropdown-content">
+           <li><a href="#">nutrition</a></li>
+           <li><a href="#">Life Style</a></li>
+           <li><a href="#">Sleep</a></li> 
+         </ul>
+       </li>
+          <li><a href="#">Profil</a>
+            <ul class="dropdown-content">
+              <li><a href="posture detector.html">my Profil</a></li>
+              <li><a href="#">settings</a></li>
+            </ul>
+          </li>
+        
+          <li><a href="#">Exercices</a>
+            <ul class="dropdown-content">
+              <li><a href="#">back</a></li>
+              <li><a href="#">lower back</a></li>
+              <li><a href="#">neck</a></li>
+              <li><a href="#">shoulders</a></li>
+            </ul>
+          </li>
+           
+      </ul>
+	</header>
+    <head>
+        <link rel="stylesheet" href="article.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="im2.jpg" style="width:100%;height:50%;">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="img3.webp" style="width:100% ;height:50%;">
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="img4.jpg" style="width:100%;height:50%;">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            <fieldset>
+           <legend style="color:black;"> <h1  class="chp1">CHAPTERS</h1></legend>
+            <p  class="chp"><a href="#C1"> Chapter 1:What is posture?</a></p>
+            <p  class="chp"><a href="#C2"> Chapter 2:Basic nutrition</a></p>
+            <p  class="chp"><a href="#C3"> Chapter 3:Life Style</a></p>
+            <p  class="chp"><a href="#C4"> Chapter 4:Sleep</a></p>
+</fieldset>
+            <h2 id="C1" style="text-align:center">What is posture?</h2>
+            <p class="p1">What is posture?</p>
+            <p class="p1"> Posture is how you hold your body. There are two types:</p>
+          <p class="p1"> Dynamic posture is how you hold yourself when you are moving, like when you are walking, running, or bending over to pick up something.
+        Static posture is how you hold yourself when you are not moving, like when you are sitting, standing, or sleeping.</p>  
+        <p class="p1">It is important to make sure that you have good dynamic and static posture.The key to good posture is the position of your spine. 
+        Your spine has three natural curves at your neck, mid back, and low back.</p>
+       <p class="p1"> Correct posture should maintain these curves, but not increase them. Your head should be above your shoulders,
+        and the top of your shoulder should be over the hips.</p>
+        
+        <hr style="width:80%;text-align:center;margin: left 50px;">
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="f1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="f2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="f3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="f4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="f5.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="f1.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="f1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="f2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="f3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="f4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="f5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="f1.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+<hr style="width:80%;text-align:center;margin: left 50px;">
+
+            <h2 id="C2" style="text-align:center">Basic nutrition</h2>
+            <p class="p1">    An essential nutrient is a nutrient that the body cannot synthesize on its own —
+                 or not to an adequate amount — and must be provided by the diet. 
+                 These nutrients are necessary for the body to function properly. 
+                 The six essential nutrients include carbohydrates, protein, fat, vitamins,
+                  minerals and water.
+                Carbohydrates
+                        Carbohydrates are the main energy source for the brain.
+                         Without carbohydrates, the body could not function properly. 
+                         Sources include fruits, breads and grains, starchy vegetables and 
+                         sugars. Make at least half of the grains you consume whole grains.
+                          Whole grains and fruit are full of fiber, which reduces the risk of coronary 
+                          heart disease and helps maintain normal blood glucose levels.
+                        Carbohydrates can be grouped into two categories: simple and complex. </p>
+                        <hr style="width:80%;text-align:center;margin: left 50px;">
+
+            <h2 id="C3" style="text-align:center">Life Style</h2>
+            <p class="p3"> healthy Lifestyles
+            A healthy lifestyle can help you thrive as you move through your life's journey. Making healthy choices isn't always easy 
+        it can be hard to find the time and energy to exercise regularly or prepare healthy meals. 
+        However, your efforts will pay off in many ways, and for the rest of your life.
+         Steps you can take:
+                Be physically active for 30 minutes most days of the week. Break this up into three 10-minute sessions when pressed for time.
+                 Healthy movement may include walking, sports, dancing, yoga or running.
+                Eat a well-balanced, low-fat diet with lots of fruits, vegetables, and whole grains. 
+                Choose a diet that's low in saturated fat and cholesterol, and moderate in sugar, salt and total fat.
+                Avoid injury by wearing seatbelts and bike helmets, using smoke and carbon monoxide detectors in the home, 
+                and using street smarts when walking alone. If you own a gun, recognize the dangers of having a gun in your home. 
+                Use safety precautions at all times.
+                Don't smoke, and quit if you do. Ask your health care provider for help.
+                 UCSF offers a smoking cessation program.
+                If you drink alcohol, drink in moderation. Never drink before or when driving, or when pregnant.
+                Ask someone you trust for help if you think you might be addicted to drugs or alcohol.</p>
+              <img src="hls.jpg" class="img3">
+                
+              <hr style="width:80%;text-align:center;margin: left 50px;">
+
+                <h2 id="C4" style="text-align:center">Sleep</h2>
+            <p class="p4">It's well-established that sleep is essential to our physical and mental health. 
+                But despite its importance, a troubling percentage of people find themselves 
+                regularly deprived of quality sleep and are notably sleepy during the day.
+                Though there's a wide range of causes and types of sleeping problems, 
+                expert consensus points to a handful of concrete steps that promote more restful sleep.
+                For many people, trying to implement all these strategies can be overwhelming.
+                 But remember that 
+                it's not all-or-nothing; you can start with small changes and work your way up 
+                toward healthier sleep habits, also known as sleep hygiene.
+                To make these sleep hygiene improvements more approachable, we've broken them into 
+                four categories:
+                
+                Creating a Sleep-Inducing Bedroom
+                Optimizing Your Sleep Schedule
+                Crafting a Pre-Bed time Routine
+                Fostering Pro-Sleep Habits During the Day
+                In each category, you can find specific actions that you can take to Make
+                 it easier to fall asleep, stay asleep, and wake up well-rested.</p>
+            <img src="sleep.jpg" class="img4">
+            <hr style="width:80%;text-align:center;margin: left 50px;">
+
+    </body>
+    <footer>
+       <pre class="pre">Any use of this site constitutes your agreement to the Terms and Conditions and Privacy Policy linked below.
+
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Notice of Privacy Practices</a>
+          <a href="#">Notice of Nondiscrimination</a>
+          <a href="#">Manage Cookies</a></pre>
+<div id="mySidenav" class="sidenav">
+    <a href="#" id="about">About</a>
+    <a href="#" id="facebook">facebook</a>
+    <a href="#" id="ourshop">Our Shop</a>
+    <a href="#" id="contact">Contact</a>
+  </div>
+</footer>
+</html>
